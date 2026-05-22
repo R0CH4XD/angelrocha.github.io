@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  <meta charset="UTF-8"/>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ángel Rocha — Software Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/skills.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-brand">
+      <div class="nav-avatar">ÁR</div>
+      <div>
+        <div class="nav-name">Ángel Rocha</div>
+        <div class="nav-sub">Software Developer</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contactame">Contactame</a>
+      <a href="#skills">habilidades</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-badge">
+      <img src="src/icons/maps.ico" alt="" width="16" height="16">
+      Acapulco, Guerrero &nbsp;·&nbsp; <span>Disponible para trabajar</span>
+    </div>
+    <h1>Software<br><span class="accent">Developer</span><br>Ángel Rocha</h1>
+    <p class="hero-sub">Desarrollo web · Servicios de red · Gestión de software · Automatización</p>
+    <div class="hero-btns">
+      <a href="#proyectos" class="btn-primary">Ver proyectos →</a>
+      <a href="#sobre-mi" class="btn-outline">Sobre mí</a>
+    </div>
+    <div class="hero-tech">
+      <div class="tech-pill">C#</div>
+      <div class="tech-pill">PHP</div>
+      <div class="tech-pill">Python</div>
+      <div class="tech-pill">Java</div>
+      <div class="tech-pill">HTML/CSS/JS</div>
+      <div class="tech-pill">DHCP</div>
+      <div class="tech-pill">Proxy</div>
+      <div class="tech-pill">Microcontroladores</div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section class="section" id="proyectos">
+    <div class="section-label">PROYECTOS</div>
+    <h2 class="section-title">Mis proyectos<br>destacados</h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filtrar(this,'todos')">Todos</button>
+      <button class="filter-btn" onclick="filtrar(this,'web')">Web</button>
+      <button class="filter-btn" onclick="filtrar(this,'gobierno')">Gobierno</button>
+      <button class="filter-btn" onclick="filtrar(this,'escolar')">Escolar</button>
+    </div>
+    <div class="projects-list">
+
+      <div class="project-card" data-cat="gobierno">
+        <div>
+          <div class="project-type">GOBIERNO · FULLSTACK</div>
+          <h3 class="project-title">Sistema de Integración<br>Promotora & Admin. de Playas</h3>
+          <p class="project-desc">Sistema que centraliza datos operativos de dos dependencias de gobierno en Acapulco, optimizando los flujos de gestión interna.</p>
+          <div class="project-tags">
+            <span class="tag">C#</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">WinForms</span>
+          </div>
+          
+        </div>
+        <div class="project-img">
+          <div class="project-img">
+          <img src="src/img/Seccion37.png" alt="Sistema Gobierno">
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reverse" data-cat="escolar web">
+        <div>
+          <div class="project-type">ESCOLAR · WEB · IA</div>
+          <h3 class="project-title">CocoWatch</h3>
+          <p class="project-desc">Plataforma web que detecta deficiencias nutricionales en cultivos de coco mediante análisis de imágenes. En fase de lanzamiento.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Visión por computadora</span>
+            <span class="tag">Web</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link"> Próximamente</a>
+          </div>
+        </div>
+        <div class="project-img">
+          <img src="src/img/cocoWatch.png" alt="Sistema Gobierno">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="section" id="sobre-mi">
+    <div class="section-label">SOBRE MÍ</div>
+    <h2 class="section-title">Un poco de<br>mi historia</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Hola, soy <strong>Ángel Eduardo Rocha Memije</strong>, desarrollador de software basado en <strong>Acapulco, Guerrero</strong>.</p>
+        <p>Me especializo en aplicaciones de escritorio y web, con experiencia en entornos de <strong>gobierno</strong>. Me apasiona resolver problemas con soluciones simples y bien planeadas.</p>
+        <p>También tengo conocimientos en <strong>infraestructura de red</strong> — DHCP, proxies — y me gusta experimentar con <strong>microcontroladores</strong>.</p>
+      </div>
+      <div>
+        <div class="exp-card">
+          <div class="exp-company">Promotora & Admin. de Playas</div>
+          <div class="exp-role">Desarrollador de Software — Gobierno</div>
+          <div class="exp-desc">Sistema de integración de información para digitalizar procesos operativos de dos dependencias gubernamentales en Acapulco.</div>
+          <div class="exp-year">2026 — Presente</div>
+        </div>
+        <div class="exp-card">
+          <div class="exp-company">CocoWatch</div>
+          <div class="exp-role">Co-desarrollador — Proyecto Escolar</div>
+          <div class="exp-desc">Plataforma web con visión por computadora para detectar deficiencias en cultivos. En fase de lanzamiento.</div>
+          <div class="exp-year">2025 — 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contactame">
+  <div class="section-label">CONTÁCTAME</div>
+  <h2 class="section-title">Hablemos<br>de tu proyecto</h2>
+  <div class="about-grid">
+
+    <div class="about-text">
+      <p>Hola, soy <strong>Ángel Eduardo Rocha Memije</strong>, desarrollador de software  en <strong>Acapulco, Guerrero</strong>.</p>
+      <p>Me especializo en aplicaciones de escritorio y web, con experiencia en entornos de <strong>gobierno</strong>. Me apasiona resolver problemas con soluciones simples y bien planeadas.</p>
+      <p>También tengo conocimientos en <strong>infraestructura de red</strong> — DHCP, proxies — y me gusta experimentar con <strong>microcontroladores</strong>.</p>
+    </div>
+
+    <div>
+      <div class="exp-card">
+        <div class="exp-role">Correo</div>
+        <div class="exp-company">rochaangel407@gmail.com</div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-role">Teléfono / WhatsApp</div>
+        <div class="exp-company">+52 744 741 4813</div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-role">GitHub</div>
+        <div class="exp-company">
+          <a href="https://github.com/R0CH4XD" target="_blank" style="color: var(--accent); text-decoration: none;">
+            github.com/R0CH4XD
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="section-label">habilidades</div>
+  <h2 class="section-title">Mis herramientas<br>de trabajo</h2>
+  <div class="skills-grid" id="skillsGrid">
+
+    <div class="skill-card" data-level="90">
+      <div class="skill-icon"><img src="src/icons/c-sharp.png" alt="C#"></div>
+      <div class="skill-name">C#</div>
+      <div class="skill-level">Avanzado · .NET / WinForms</div>
+      <div class="skill-bar"><div class="skill-fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-level="80">
+      <div class="skill-icon"><img src="src/icons/php.png" alt="PHP"></div>
+      <div class="skill-name">PHP</div>
+      <div class="skill-level">Principiante · Backend web</div>
+      <div class="skill-bar"><div class="skill-fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-level="80">
+      <div class="skill-icon"><img src="src/icons/python.png" alt="Python"></div>
+      <div class="skill-name">Python</div>
+      <div class="skill-level">Avanzado · Scripts & IA</div>
+      <div class="skill-bar"><div class="skill-fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-level="85">
+      <div class="skill-icon"><img src="src/icons/html-5.png" alt="Desarrollo Web"></div>
+      <div class="skill-name">Desarrollo Web</div>
+      <div class="skill-level">HTML · CSS · JS</div>
+      <div class="skill-bar"><div class="skill-fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-level="55">
+      <div class="skill-icon"><img src="src/icons/java.png" alt="Java"></div>
+      <div class="skill-name">Java</div>
+      <div class="skill-level">Principiante</div>
+      <div class="skill-bar"><div class="skill-fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-level="75">
+      <div class="skill-icon"><img src="src/icons/dhcp.png" alt="DHCP"></div>
+      <div class="skill-name">Servicios DHCP</div>
+      <div class="skill-level">Redes · Infraestructura</div>
+      <div class="skill-bar"><div class="skill-fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-level="70">
+      <div class="skill-icon"><img src="src/icons/proxy.png" alt="Proxy"></div>
+      <div class="skill-name">Proxy</div>
+      <div class="skill-level">Configuración de redes</div>
+      <div class="skill-bar"><div class="skill-fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-level="50">
+      <div class="skill-icon"><img src="src/icons/microcontroller.png" alt="Microcontroladores"></div>
+      <div class="skill-name">Microcontroladores</div>
+      <div class="skill-level">Arduino · Electrónica</div>
+      <div class="skill-bar"><div class="skill-fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-level="90">
+      <div class="skill-icon"><img src="src/icons/planning.png" alt="Planeación"></div>
+      <div class="skill-name">Planeación</div>
+      <div class="skill-level">Diseño de sistemas</div>
+      <div class="skill-bar"><div class="skill-fill"></div></div>
+    </div>
+
+    <div class="skill-card" data-level="88">
+      <div class="skill-icon"><img src="src/icons/career.png" alt="Gestión de Software"></div>
+      <div class="skill-name">Gestión de Software</div>
+      <div class="skill-level">Ciclo de vida</div>
+      <div class="skill-bar"><div class="skill-fill"></div></div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Diseñado y construido por <span>Ángel Eduardo Rocha Memije</span> · Acapulco, Guerrero · 2025</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/filter.js"></script>
+  <script src="js/animations.js"></script>
+
+</body>
+</html>

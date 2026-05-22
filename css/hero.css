@@ -1,0 +1,123 @@
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 80px;
+}
+
+/* ── BADGE (el texto de ubicación) ── */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.hero-badge span {
+  color: var(--accent);
+}
+
+/* ── TÍTULO GRANDE ── */
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(52px, 9vw, 110px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -2px;
+}
+
+.hero h1 .accent {
+  color: var(--accent);
+}
+
+/* ── SUBTÍTULO ── */
+.hero-sub {
+  font-size: 16px;
+  color: var(--muted);
+  margin-top: 24px;
+  max-width: 480px;
+}
+
+/* ── BOTONES ── */
+.hero-btns {
+  display: flex;
+  gap: 14px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #0e0e0e;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── PILLS DE TECNOLOGÍAS ── */
+.hero-tech {
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tech-pill {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 12px;
+  color: var(--muted);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.tech-pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── CELULAR ── */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: clamp(40px, 12vw, 72px);
+  }
+}
