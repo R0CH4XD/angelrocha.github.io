@@ -3,21 +3,40 @@
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 20px;
+  grid-auto-rows: auto;
 }
 
-/* ── TARJETA ── */
+/* ── TARJETA BASE ── */
 .skill-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 24px 20px;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
 }
 
 .skill-card:hover {
   border-color: var(--accent);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  background: var(--bg3);
+}
+
+/* ── VARIACIÓN DE TAMAÑOS ── */
+.skill-card:nth-child(1),
+.skill-card:nth-child(3),
+.skill-card:nth-child(9) {
+  padding: 32px 24px;
+}
+
+.skill-card:nth-child(2),
+.skill-card:nth-child(5) {
+  grid-column: span 1;
+}
+
+.skill-card:nth-child(6),
+.skill-card:nth-child(7) {
+  padding: 20px 18px;
 }
 
 /* ── ICONO ── */
@@ -28,9 +47,23 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
-  background: var(--bg3);
   border-radius: 10px;
   padding: 8px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+/* Variación de fondos de iconos */
+.skill-card:nth-child(odd) .skill-icon {
+  background: var(--bg3);
+}
+
+.skill-card:nth-child(even) .skill-icon {
+  background: rgba(200, 241, 53, 0.08);
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.1);
+  background: rgba(200, 241, 53, 0.12);
 }
 
 .skill-icon img {
@@ -39,18 +72,50 @@
   object-fit: contain;
 }
 
+/* Iconos más grandes para skills principales */
+.skill-card:nth-child(1) .skill-icon,
+.skill-card:nth-child(3) .skill-icon,
+.skill-card:nth-child(9) .skill-icon {
+  width: 56px;
+  height: 56px;
+}
+
+.skill-card:nth-child(1) .skill-icon img,
+.skill-card:nth-child(3) .skill-icon img,
+.skill-card:nth-child(9) .skill-icon img {
+  width: 32px;
+  height: 32px;
+}
+
 /* ── TEXTO ── */
 .skill-name {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 15px;
-  color: var(--accent);
   margin-bottom: 4px;
+  transition: color 0.2s;
+}
+
+.skill-card:nth-child(odd) .skill-name {
+  color: var(--accent);
+}
+
+.skill-card:nth-child(even) .skill-name {
+  color: var(--accent2);
+}
+
+.skill-card:hover .skill-name {
+  color: var(--text);
 }
 
 .skill-level {
   font-size: 12px;
   color: var(--muted);
+  transition: color 0.2s;
+}
+
+.skill-card:hover .skill-level {
+  color: var(--text);
 }
 
 /* ── BARRA ── */
@@ -70,9 +135,20 @@
   transition: width 1s ease;
 }
 
+.skill-card:nth-child(even) .skill-fill {
+  background: var(--accent2);
+}
+
 /* ── CELULAR ── */
 @media (max-width: 768px) {
   .skills-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .skill-card:nth-child(1),
+  .skill-card:nth-child(3),
+  .skill-card:nth-child(9) {
+    padding: 24px 20px;
   }
 }
