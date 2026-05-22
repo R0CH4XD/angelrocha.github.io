@@ -1,4 +1,3 @@
-
 nav {
   position: fixed;
   top: 0;
@@ -69,6 +68,14 @@ nav {
   }
 
   .nav-links {
-    display: none;
+    display: flex;
+    gap: 4px;
+    flex-wrap: nowrap;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    padding: 4px 6px;
+    white-space: nowrap;
   }
 }

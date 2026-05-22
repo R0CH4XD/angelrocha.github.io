@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     entradas.forEach(function (entrada, i) {
       if (entrada.isIntersecting) {
 
-        // Aparece con un pequeño retraso entre cada tarjeta
+        
         setTimeout(function () {
           entrada.target.classList.add('visible');
 
@@ -22,13 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }, i * 80);
 
-        // Deja de observar ese elemento — ya apareció
+        
         observador.unobserve(entrada.target);
       }
     });
   }, { threshold: 0.15 });
 
-  // Le dice al observador qué elementos vigilar
+
   elementos.forEach(function (el) {
     observador.observe(el);
   });

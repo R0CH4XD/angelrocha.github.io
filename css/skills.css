@@ -16,11 +16,7 @@
   transition: border-color 0.2s, transform 0.2s, background 0.2s;
 }
 
-.skill-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-6px);
-  background: var(--bg3);
-}
+
 
 /* ── VARIACIÓN DE TAMAÑOS ── */
 .skill-card:nth-child(1),
@@ -50,6 +46,16 @@
   border-radius: 10px;
   padding: 8px;
   transition: transform 0.2s, background 0.2s;
+}
+
+.exp-card {
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+
+.exp-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-6px);
+  background: var(--bg3);
 }
 
 /* Variación de fondos de iconos */
@@ -134,9 +140,23 @@
   width: 0;
   transition: width 1s ease;
 }
-
+/*  fijo*/
+.skill-card {
+  background: var(--card);
+  border: 1px solid var(--accent);  
+  border-radius: 14px;
+  padding: 24px 20px;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+/* hover */
+.skill-card:hover {
+  border-color: var(--accent2);  
+  transform: translateY(-6px);
+  background: var(--bg4);
+}
 .skill-card:nth-child(even) .skill-fill {
   background: var(--accent2);
+  
 }
 
 /* ── CELULAR ── */
